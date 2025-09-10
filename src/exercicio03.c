@@ -1,6 +1,6 @@
 /*
  ============================================================================
- Nome        : exercicio01.c
+ Nome        : exercicio03.c
  Autor       : Yuri140
  Data        : 09/09/2025
  Descrição   : Desenvolver um programa que leia um número inteiro positivo e exiba a soma dos seus algarismos.
