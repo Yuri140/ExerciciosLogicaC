@@ -41,4 +41,5 @@ int main() {
         printf("Não há valores negativos.\n");
     }
 
+    return 0;
 }

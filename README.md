@@ -28,7 +28,8 @@ ExerciciosLogicaC/
 2.  [Exercício 02](./src/exercicio02.c) – Média dos números pares e ímpares
 3.  [Exercício 03](./src/exercicio03.c) – Somar algarismos de um número
 4.  [Exercício 04](./src/exercicio04.c) – Somar positivos e negativos separadamente
-5.  *(em breve...)*
+5.  [Exercício 05](./src/exercicio05.c) – Números no intervalo [10, 50]
+6.  *(em breve...)*
 
 ---
 
