@@ -27,7 +27,8 @@ ExerciciosLogicaC/
 1.  [Exercício 01](./src/exercicio01.c) – Maior e menor número digitado
 2.  [Exercício 02](./src/exercicio02.c) – Média dos números pares e ímpares
 3.  [Exercício 03](./src/exercicio03.c) – Somar algarismos de um número
-4.  *(em breve...)*
+4.  [Exercício 04](./src/exercicio04.c) – Somar positivos e negativos separadamente
+5.  *(em breve...)*
 
 ---
 
