@@ -1,0 +1,13 @@
+# Arquivos gerados pela compilação
+build/
+*.exe
+*.o
+*.obj
+
+# Arquivos de configuração específicos do VS Code
+.vscode/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+

@@ -53,6 +53,27 @@ gcc src/exercicio01.c -o exercicio01.exe
 
 ---
 
+## 🌐 Suporte a caracteres especiais (UTF-8)
+
+Para garantir que caracteres especiais (acentos, símbolos, etc.) sejam exibidos corretamente no terminal do Windows, é recomendado configurar o sistema para usar UTF-8 como página de código padrão:
+
+### Configurando UTF-8 no Windows
+
+1. **Método Temporário (para a sessão atual do CMD)**:
+   ```
+   chcp 65001
+   ```
+
+2. **Método Permanente através das Configurações do Windows**:
+   - Abra as **Configurações do Windows** (tecla Windows + I)
+   - Vá para **Hora e Idioma** → **Idioma e região**
+   - Clique em **Configurações administrativas de idioma**
+   - Na aba **Região**, clique em **Alterar localidade do sistema**
+   - Marque a opção **Usar Unicode UTF-8 para suporte a idiomas em todo o mundo**
+   - Clique em **OK** e reinicie o computador
+
+---
+
 ### 📚 Objetivo do Repositório
 
 Este repositório tem como finalidade:
