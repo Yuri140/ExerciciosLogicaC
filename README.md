@@ -30,7 +30,8 @@ ExerciciosLogicaC/
 4.  [Exercício 04](./src/exercicio04.c) – Somar positivos e negativos separadamente
 5.  [Exercício 05](./src/exercicio05.c) – Números no intervalo [10, 50]
 6.  [Exercício 06](./src/exercicio06.c) – Fatorial de um número
-7.  *(em breve...)*
+7.  [Exercício 07](./src/exercicio07.c) – Sistema bancário simples
+8.  *(em breve...)*
 
 ---
 
