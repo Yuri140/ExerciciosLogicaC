@@ -31,7 +31,8 @@ ExerciciosLogicaC/
 5.  [Exercício 05](./src/exercicio05.c) – Números no intervalo [10, 50]
 6.  [Exercício 06](./src/exercicio06.c) – Fatorial de um número
 7.  [Exercício 07](./src/exercicio07.c) – Sistema bancário simples
-8.  *(em breve...)*
+8.  [Exercício 08](./src/exercicio08.c) – Função para somar dois números
+9.  *(em breve...)*
 
 ---
 
