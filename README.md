@@ -32,7 +32,8 @@ ExerciciosLogicaC/
 6.  [Exercício 06](./src/exercicio06.c) – Fatorial de um número
 7.  [Exercício 07](./src/exercicio07.c) – Sistema bancário simples
 8.  [Exercício 08](./src/exercicio08.c) – Função para somar dois números
-9.  *(em breve...)*
+9.  [Exercício 09](./src/exercicio09.c) – Jogo de acertar a distância do monstro
+10. *(em breve...)*
 
 ---
 
