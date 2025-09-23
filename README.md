@@ -33,7 +33,7 @@ ExerciciosLogicaC/
 7.  [Exercício 07](./src/exercicio07.c) – Sistema bancário simples
 8.  [Exercício 08](./src/exercicio08.c) – Função para somar dois números
 9.  [Exercício 09](./src/exercicio09.c) – Jogo de acertar a distância do monstro
-10. *(em breve...)*
+10. [Exercício 10](./src/exercicio10.c) – Funções para manipulação de vetores
 
 ---
 
