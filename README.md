@@ -34,6 +34,7 @@ ExerciciosLogicaC/
 8.  [Exercício 08](./src/exercicio08.c) – Função para somar dois números
 9.  [Exercício 09](./src/exercicio09.c) – Jogo de acertar a distância do monstro
 10. [Exercício 10](./src/exercicio10.c) – Funções para manipulação de vetores
+11. [Exercício 11](./src/exercicio11.c) – Calculadora de IMC com classificação
 
 ---
 
