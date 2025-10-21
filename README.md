@@ -36,6 +36,7 @@ ExerciciosLogicaC/
 10. [Exercício 10](./src/exercicio10.c) – Funções para manipulação de vetores
 11. [Exercício 11](./src/exercicio11.c) – Calculadora de IMC com classificação
 12. [Exercício 12](./src/exercicio12.c) – Manipulação de matrizes bidimensionais
+13. [Exercício 13](./src/exercicio13.c) – Jogo de batalha naval simplificado
 
 ---
 
