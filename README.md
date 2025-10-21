@@ -38,6 +38,7 @@ ExerciciosLogicaC/
 12. [Exercício 12](./src/exercicio12.c) – Manipulação de matrizes bidimensionais
 13. [Exercício 13](./src/exercicio13.c) – Jogo de batalha naval simplificado
 14. [Exercício 14](./src/exercicio14.c) – Inversão de elementos em vetores
+15. [Exercício 15](./src/exercicio15.c) – Detectar e remover valores duplicados em vetor
 
 ---
 
