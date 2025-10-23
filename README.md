@@ -41,6 +41,7 @@ ExerciciosLogicaC/
 15. [Exercício 15](./src/exercicio15.c) – Detectar e remover valores duplicados em vetor
 16. [Exercício 16](./src/exercicio16.c) – Verificador de palíndromo (string)
 17. [Exercício 17](./src/exercicio17.c) – Verificador de palíndromo (número inteiro)
+18. [Exercício 18](./src/exercicio18.c) – Contar algarismos pares em um número
 
 ---
 
