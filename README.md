@@ -44,6 +44,7 @@ ExerciciosLogicaC/
 18. [Exercício 18](./src/exercicio18.c) – Contar algarismos pares em um número
 19. [Exercício 19](./src/exercicio19.c) – Soma dos números ímpares em um intervalo
 20. [Exercício 20](./src/exercicio20.c) – Conversão de número decimal para binário
+21. [Exercício 21](./src/exercicio21.c) – Encontrar números perfeitos
 
 ---
 
