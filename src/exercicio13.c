@@ -12,92 +12,97 @@
 */
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define TAMANHO_LINHA 5
+#define TAMANHO_COLUNA 5
+
+const int tamanhoLinha = 5, tamanhoColuna = 5;
 
 int posicionar(int tipo, int linha, int coluna);
 void exibirTabuleiro();
 void inicializarTabuleiro();
 int atirar(int linha, int coluna);
-const int tamanhoLinha = 5, tamanhoColuna = 5;
-int tabuleiro[tamanhoLinha][tamanhoColuna];
+void posicionarPecasManualmente();
+void posicionarPecasAutomaticamente();
+int tabuleiro[TAMANHO_LINHA][TAMANHO_COLUNA];
 
 int main(){
-    int tipo, linha, coluna;
+    int linha, coluna;
     int submarino = 2, porta = 3, navio = 4;
     int misseis = 0;
+    int opcao;
+
+    srand(time(NULL));
 
     inicializarTabuleiro();
 
-    printf("Insira 3 embarcacoes para comecar o jogo \n");
+    printf("=== BEM-VINDO AO JOGO DE BATALHA NAVAL ===\n\n");
+    printf("Escolha o modo de posicionamento das embarcacoes:\n");
+    printf("1 - Posicionar manualmente\n");
+    printf("2 - Posicionar automaticamente\n");
+    printf("Opcao: ");
+    scanf("%i", &opcao);
 
-    for(int i = 0; i<3; i++){
-
-        for(int i = 0; i<3; i++){
-            printf("Escolha o tipo de embarcacao que voce quer: \n 1 - Submarino \n 2 - Porta Avioes \n 3 - Navio \n");
-            scanf("%i", &tipo);
-            printf("Em qual linha quer posicionar: ");
-            scanf("%i", &linha);
-            printf("Em qual coluna quer posicionar: ");
-            scanf("%i", &coluna);
-            if(posicionar(tipo, linha, coluna) == 0){
-                printf("\n Erro no posicionsamento \n\n ");
-                i--;
-            }else{
-            printf("\n Embarcacao inserida no tabuleiro \n\n");
-            }
-        }
+    if (opcao == 1) {
+        posicionarPecasManualmente();
+    } else if (opcao == 2) {
+        posicionarPecasAutomaticamente();
+    } else {
+        printf("Opcao invalida! Usando posicionamento manual.\n");
+        posicionarPecasManualmente();
     }
 
     while(submarino != 5 || porta != 5 || navio != 5){
 
-    exibirTabuleiro();
+        printf("\n\nIniciando disparos\n\n");
+        printf("Insira a linha: ");
+        scanf("%i", &linha);
+        printf("Insira a coluna: ");
+        scanf("%i", &coluna);
+        misseis++;
 
-    printf("\n\nIniciando disparos\n\n");
-    printf("Insira a linha: ");
-    scanf("%i", &linha);
-    printf("Insira a coluna: ");
-    scanf("%i", &coluna);
-    misseis++;
+        switch(atirar(linha, coluna)){
+            case 1:
+                printf("\nVoce acertou o submarino!\n");
+                submarino--;
+                break;
+            case 2:
+                printf("\nVoce acertou o porta avioes!\n");
+                porta--;
+                break;
+            case 3:
+                printf("\nVoce acertou o navio!\n");
+                navio--;
+                break;
+            case 4:
+                printf("\nVoce acertou a agua...\n");
+                break;
+            case 9:
+                printf("\nVoce já tinha acertado essa parte da embarcacao\n");
+                break;
+            default:
+                printf("\nErro\n");
+                misseis--;
+                break;
+        }
 
-    switch(atirar(linha, coluna)){
-        case 1:
-            printf("\nVoce acertou o submarino!\n");
-            submarino--;
-            break;
-        case 2:
-            printf("\nVoce acertou o porta avioes!\n");
-            porta--;
-            break;
-        case 3:
-            printf("\nVoce acertou o navio!\n");
-            navio--;
-            break;
-        case 4:
-            printf("\nVoce acertou a agua...\n");
-            break;
-        case 9:
-            printf("\nVoce já tinha acertado essa parte da embarcacao\n");
-            break;
-        default:
-            printf("\nErro\n");
-            misseis--;
-            break;
-    }
-
-    if(submarino == 0){
-        printf("Voce destruiu o submarino\n");
-        submarino = 5;
-    }
-    if(porta == 0){
-        printf("Voce destruiu o porta avioes\n");
-        porta = 5;
-     }
-    if(navio == 0){
-        printf("Voce destruiu o navio\n");
-        navio = 5;
-    }
+        if(submarino == 0){
+            printf("Voce destruiu o submarino\n");
+            submarino = 5;
+        }
+        if(porta == 0){
+            printf("Voce destruiu o porta avioes\n");
+            porta = 5;
+        }
+        if(navio == 0){
+            printf("Voce destruiu o navio\n");
+            navio = 5;
+        }
 
 	}
-
+    exibirTabuleiro();
     printf("\n\n\nParabens voce destruiu todas as embarcacoes inimigas, para isso voce utilizou %i misseis\n\n\n", misseis);
 
 	return 0;
@@ -182,4 +187,82 @@ int atirar(int linha, int coluna){
     }else{
         return 4;
     }
+}
+
+void posicionarPecasManualmente(){
+
+    int submarino_posicionado = 0, porta_avioes_posicionado = 0, navio_posicionado = 0;
+    int linha, coluna;
+
+    printf("Posicione suas embarcações para começar o jogo.\n");
+
+    while (!submarino_posicionado) {
+        printf("\nPosicione o Submarino (tipo 1)\n");
+        printf("Em qual linha quer posicionar: ");
+        scanf("%i", &linha);
+        printf("Em qual coluna quer posicionar: ");
+        scanf("%i", &coluna);
+        if (posicionar(1, linha, coluna) == 1) {
+            printf("Submarino posicionado com sucesso!\n");
+            submarino_posicionado = 1;
+        } else {
+            printf("\nErro no posicionamento. Tente novamente.\n");
+        }
+    }
+
+    while (!porta_avioes_posicionado) {
+        printf("\nPosicione o Porta-Aviões (tipo 2)\n");
+        printf("Em qual linha quer posicionar: ");
+        scanf("%i", &linha);
+        printf("Em qual coluna quer posicionar: ");
+        scanf("%i", &coluna);
+        if (posicionar(2, linha, coluna) == 1) {
+            printf("Porta-Aviões posicionado com sucesso!\n");
+            porta_avioes_posicionado = 1;
+        } else {
+            printf("\nErro no posicionamento. Tente novamente.\n");
+        }
+    }
+
+    while (!navio_posicionado) {
+        printf("\nPosicione o Navio (tipo 3)\n");
+        printf("Em qual linha quer posicionar: ");
+        scanf("%i", &linha);
+        printf("Em qual coluna quer posicionar: ");
+        scanf("%i", &coluna);
+        if (posicionar(3, linha, coluna) == 1) {
+            printf("Navio posicionado com sucesso!\n");
+            navio_posicionado = 1;
+        } else {
+            printf("\nErro no posicionamento. Tente novamente.\n");
+        }
+    }
+
+    printf("\nTodas as embarcações foram posicionadas. Boa sorte!\n");
+}
+
+void posicionarPecasAutomaticamente(){
+    int linha, coluna;
+    
+    printf("Posicionando embarcações automaticamente...\n");
+    
+    do {
+        linha = rand() % tamanhoLinha;
+        coluna = rand() % tamanhoColuna;
+    } while (posicionar(1, linha, coluna) != 1);
+    printf("Submarino posicionado!\n");
+    
+    do {
+        linha = rand() % tamanhoLinha;
+        coluna = rand() % tamanhoColuna;
+    } while (posicionar(2, linha, coluna) != 1);
+    printf("Porta-Aviões posicionado!\n");
+    
+    do {
+        linha = rand() % tamanhoLinha;
+        coluna = rand() % tamanhoColuna;
+    } while (posicionar(3, linha, coluna) != 1);
+    printf("Navio posicionado!\n");
+    
+    printf("\nTodas as embarcações foram posicionadas automaticamente. Boa sorte!\n");
 }
